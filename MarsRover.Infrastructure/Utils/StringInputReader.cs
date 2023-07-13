@@ -4,7 +4,7 @@ namespace MarsRover.Infrastructure.Utils
 {
     public class StringInputReader : IInputReader
     {
-        public string ReadLine()
+        public string? ReadLine()
         {
             return Console.ReadLine();
         }

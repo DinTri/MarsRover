@@ -24,7 +24,7 @@ namespace MarsRover.Cmd
         {
             // Read the plateau coordinates
             _outputWriter.WriteLine("Enter the data for the plateau and rovers (format: plateauX plateauY rover1X rover1Y rover1Orientation rover1Instructions rover2X rover2Y rover2Orientation rover2Instructions ...):");
-            string plateauCoordinates = _inputReader.ReadLine();
+            string? plateauCoordinates = _inputReader.ReadLine();
             if (string.IsNullOrWhiteSpace(plateauCoordinates))
             {
                 _outputWriter.WriteLine("Invalid plateau coordinates");
@@ -46,7 +46,7 @@ namespace MarsRover.Cmd
             while (true)
             {
                 // Read the rover's position
-                string roverPosition = _inputReader.ReadLine();
+                string? roverPosition = _inputReader.ReadLine();
                 if (string.IsNullOrWhiteSpace(roverPosition))
                 {
                     // Reached the end of input
@@ -71,7 +71,7 @@ namespace MarsRover.Cmd
                 };
 
                 // Read the instructions
-                string instructions = _inputReader.ReadLine();
+                string? instructions = _inputReader.ReadLine();
                 if (string.IsNullOrWhiteSpace(instructions))
                 {
                     _outputWriter.WriteLine("Missing instructions");
